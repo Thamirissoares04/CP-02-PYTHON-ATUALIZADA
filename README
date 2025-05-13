@@ -1,13 +1,13 @@
-##README - Organizador de Dados em Lista Ligada
+**README - Organizador de Dados em Lista Ligada
 
-1. Objetivo do Projeto
+*1. Objetivo do Projeto
 Este projeto implementa um sistema para organizar grandes volumes de dados representados como números inteiros,
 armazenados em uma lista ligada. A organização segue dois critérios:
 - Números positivos são ordenados usando Merge Sort.
 - Números negativos são ordenados usando uma versão adaptada do Radix Sort.
 Ao final, os dados negativos ordenados aparecem antes dos positivos na lista final concatenada.
 
-2. estrutura_lista.py
+*2. estrutura_lista.py
 Contém a definição da estrutura de lista ligada personalizada.
 - Classe Node: representa um nó da lista, com valor (data) e ponteiro (next).
 - Classe LinkedList: contém métodos essenciais como:
@@ -16,7 +16,7 @@ Contém a definição da estrutura de lista ligada personalizada.
  - is_empty(): verifica se a lista está vazia.
  - to_list(): converte para lista Python comum (somente para visualização, não usada em ordenação).
 
-3. merge_sort.py
+*3. merge_sort.py
 Implementa o algoritmo Merge Sort adaptado para operar diretamente sobre listas ligadas.
 - split_list(head): divide a lista ligada em duas metades.
 - merge_sorted_lists(left, right): combina duas listas já ordenadas.
@@ -24,7 +24,7 @@ Implementa o algoritmo Merge Sort adaptado para operar diretamente sobre listas 
 Este algoritmo é aplicado somente aos números positivos.
 Complexidade teórica: O(n log n)
 
-4. radix_sort_negativos.py
+*4. radix_sort_negativos.py
 Implementa Radix Sort adaptado para números negativos.
 - Passo 1: Inverte o sinal de todos os valores (para torná-los positivos).
 - Passo 2: Aplica Radix Sort usando buckets de 0 a 9, ordenando por cada dígito.
@@ -34,7 +34,7 @@ Funções auxiliares:
 - get_digit: retorna o dígito específico de um número.
 Complexidade teórica: O(nk), onde k é o número de dígitos.
 
-5. main.py (função principal)
+*5. main.py (função principal)
 - Cria a lista original com valores de exemplo.
 - Separa os valores em negativos e positivos usando separar_lista.
 - Ordena os negativos com Radix Sort e positivos com Merge Sort.
@@ -46,7 +46,7 @@ Funções auxiliares:
 - separar_lista(head): percorre a lista original e separa os elementos em duas novas listas.
 - concatenar_listas(lista1, lista2): une duas listas ligadas.
 
-6. Observações Finais
+*6. Observações Finais
 - Nenhuma parte da ordenação converte listas ligadas em arrays, conforme exigido.
 - O código é modular, podendo ser expandido para ler arquivos externos ou entrada do usuário.
 - O tempo é medido com precisão em milissegundos.
